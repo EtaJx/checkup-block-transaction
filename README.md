@@ -38,7 +38,10 @@ blocklet bundle
 blocklet deploy .blocklet/bundle
 ```
 
-**注意**
+### 注意
 
 该blocklet使用vite构建，打包目录为`dist`，所以`blocklet.yml`配置文件中，`main`为`dist`，且`path`和`prefix`均为`'/'`
 
+### 其他
+
+- 该项目为静态项目，没有使用到后端，应为有接口可以直接获取数据，分页前端处理即可
