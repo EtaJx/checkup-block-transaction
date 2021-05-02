@@ -10,6 +10,9 @@ const App = () => {
     const [isLoading, setIsLoading] = useState(false)
     useEffect(() => {
         if (currentHash) {
+            /**
+             * 每次请求前重置数据
+             */
             setIsLoading(true)
             setData({})
             fetch(`https://blockchain.info/rawblock/${currentHash}`)

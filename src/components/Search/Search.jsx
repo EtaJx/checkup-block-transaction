@@ -12,7 +12,7 @@ const Search = (props) => {
 
     const handleSearch = useCallback(() => {
         onSearch && onSearch(searchStr)
-    }, [searchStr]);
+    }, [searchStr])
     return (
         <div className="search-container">
             <input

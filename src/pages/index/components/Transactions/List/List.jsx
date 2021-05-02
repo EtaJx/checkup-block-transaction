@@ -9,22 +9,24 @@ const List = (props) => {
     const [totalPage, setTotalPage] = useState(0)
     useEffect(() => {
         if (data.length !== 0) {
+            // 每页数据条数
             const pageSize = 5;
-            const tempData = data.reduce((prev = [], current, index, arr) => {
+            // 对所有数据进行切片
+            const slicedData = data.reduce((prev = [], current, index, arr) => {
                 const curStep = arr.slice(prev.length * pageSize, (prev.length + 1) * pageSize)
                 if (!!curStep.length) {
                     prev.push(curStep)
                 }
                 return prev
             }, [])
-            setCurrentData(tempData[currentPage - 1])
-            setTotalPage(tempData.length)
+            setCurrentData(slicedData[currentPage - 1])
+            setTotalPage(slicedData.length)
         }
     }, [data, currentPage])
 
     const handlePagination = useCallback((page) => {
         setCurrentPage(page)
-    }, []);
+    }, [])
 
     return (
         <div>

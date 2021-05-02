@@ -1,5 +1,5 @@
 import React, { useEffect, useState, memo } from 'react'
-import BlockItem from './BlockItem';
+import BlockItem from './BlockItem'
 import './Block.css'
 import { BLOCK_LIST_CONFIG } from './blockListConfig'
 
@@ -10,6 +10,9 @@ const Block = (props) => {
 
     useEffect(() => {
         if (Object.keys(data).length !== 0) {
+            /**
+             * 根据 blockListConfig 配置文件拿取接口数据中对应的数据
+             */
             const calculateData = Object.entries(data).reduce((prevValue = [], currentValue) => {
                 const [key, value] = currentValue
                 const blockConfig = BLOCK_LIST_CONFIG[key]
@@ -36,7 +39,7 @@ const Block = (props) => {
                 <>
                     {
                         summarizeData.map(item => {
-                            const {key, value, render} = item;
+                            const { key, value, render } = item
                             return (
                                 <BlockItem
                                     key={value}
@@ -53,4 +56,4 @@ const Block = (props) => {
     )
 }
 
-export default memo(Block);
+export default memo(Block)
