@@ -1,0 +1,24 @@
+.pagination{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.pagination-item{
+  padding: 10px;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pagination-item:first-child{
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+}
+.pagination-active{
+  background-color: #58B2DC;
+  color: #fff;
+}
+

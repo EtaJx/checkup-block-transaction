@@ -1,0 +1,22 @@
+.block-container{
+  width: 100%;
+  box-sizing: border-box;
+}
+.block__list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgb(223, 227, 235);
+}
+.block__list-item-name{
+  padding: 10px 0;
+  width: 50%;
+}
+.block__list-item-render{
+  padding: 10px 0;
+  width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

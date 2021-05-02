@@ -1,0 +1,86 @@
+.item-container{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e3e3e3;
+}
+.item-container__hash{
+  display: flex;
+  align-items: center;
+}
+.item__description{
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+.item__label{
+  flex: 1;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: 100px;
+}
+.item__value{
+  width: calc(100% - 100px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+}
+.item__time{
+  box-sizing: border-box;
+  width: 50%;
+  text-align: right;
+  padding: 0 20px
+}
+
+.item-transaction{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.item-whereabouts{
+  flex: 1;
+  box-sizing: border-box;
+  width: 100px;
+  padding: 10px 20px;
+  color: #58B2DC;
+}
+.item-transaction__inputs-container, .item-transaction__out-container{
+  display: flex;
+  width: calc(50% - 100px);
+  flex-direction: column;
+}
+.item-transaction__inputs, .item-transaction__out{
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+.item-transaction__inputs-hash, .item-transaction__out-hash{
+  flex: 1;
+  max-width: 350px;
+  margin-right: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+}
+.item-transaction__out{
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.item-container__fee{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-transaction__out-fee{
+  text-align: right;
+}
+.item__spent-total{
+  background-color: #B5CAA0;
+  box-sizing: border-box;
+  margin: 0 20px;
+  padding: 4px 2px;
+  border-radius: 4px;
+  text-align: right;
+  color: #7BA23F;
+  font-size: 14px;
+}
